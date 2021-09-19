@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package poc.chat;
+
+option go_package = 'poc/v1/chat';
+
+import "common/common.proto";
+
+
+message Chat {
+  poc.v1.common.Msg msg = 1;
+  string sender = 2;
+  message Property {
+    string size = 1;
+    string copyright = 2;
+  }
+  oneof content {
+    string string_content = 3;
+    int64 int_content = 4;
+  }
+}
