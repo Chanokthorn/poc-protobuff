@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package poc.chat;
+
+option go_package = 'poc/v1/chat';
+
+import "chat/chat.proto";
+import "google/protobuf/empty.proto";
+
+service ChatService {
+  rpc CreateChat(CreateChatRequest) returns (CreateChatResponse);
+  rpc ListChat(ListChatRequest) returns (ListChatResponse);
+}
+
+message CreateChatRequest { string content = 1; }
+
+message CreateChatResponse { Chat chat = 1; }
+
+message ListChatRequest { google.protobuf.Empty empty = 1; }
+
+message ListChatResponse { repeated Chat chats = 1; }
