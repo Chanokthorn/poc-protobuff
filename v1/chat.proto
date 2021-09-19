@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package poc.chat;
 
-option go_package = 'poc/v1/chat';
+option go_package = 'poc/v1';
 
-import "common/common.proto";
+import "common.proto";
 
 
 message Chat {

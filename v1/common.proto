@@ -2,7 +2,8 @@ syntax = "proto3";
 
 package poc.v1.common;
 
-option go_package = 'poc/v1/common';
+option go_package = 'poc/v1';
+
 import "google/protobuf/timestamp.proto";
 
 message Msg {
