@@ -13,9 +13,10 @@ message Chat {
   message Property {
     string size = 1;
     string copyright = 2;
+    string note = 3;
   }
   oneof content {
-    string string_content = 3;
-    int64 int_content = 4;
+    string string_content = 4;
+    int64 int_content = 5;
   }
 }
