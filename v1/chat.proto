@@ -16,5 +16,6 @@ message Chat {
   oneof content {
     string string_content = 3;
     int64 int_content = 4;
+    string john_content = 5;
   }
 }
