@@ -12,6 +12,7 @@ message Chat {
   string sender = 2;
   message Property {
     string size = 1;
+    string copyright = 2;
   }
   oneof content {
     string string_content = 3;
